@@ -1,0 +1,209 @@
+/* o seletor universal * foi usado 
+para resetar todos os dispositivos 
+pardões do navegador como 
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /*
+    background: url(./assets/bg-mobile.jpg) ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+
+    background:url(./assets/bg-mobile.jpg) no-repeat top center position/size;
+    
+    */
+    background: var(--bg-url) no-repeat top center/cover ;
+    
+}
+
+/*Modo ligth criamos uma variavel */
+:root {
+ --text-color: white;
+ --bg-url: url(./assets/bg-mobile.jpg) ;
+ --stroke-color:rgba(255, 255, 255, 0.5);
+ --surface-color: rgba(255, 255, 255, 0.05);
+ --surface-color-hover: rgba(0, 0, 0, 0.02);
+ --highlight-color: rgba(255, 255, 255, 0.2);
+ --switch-bg-url-url: url(./assets/moon-stars.svg);
+}
+ .light{
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.25);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url-url: url(./assets/sun.svg);
+}
+
+body * {
+font-family: 'Inter Tight', sans-serif;
+color: white ;
+color: var(--text-color);
+}
+/* aqui nos alinhamos a caixa
+ Uma div é um elemento em block
+ "Elementos em linha eu não consigo
+ aplicar o margin: auto;"
+ para aplicar o margin: auto;
+ deve se aplicar o display: block;
+*/
+#container{
+ width: 386px ;
+ margin: 56px auto 0px;
+
+ padding: 0 24px;
+
+}
+
+/*Profile*/
+#profile{
+  text-align:center;
+  padding: 24px;
+}
+/* Se baixo tivesse um      display:block; 
+o exemplo acima de 
+text-aling: right; não funcionaria
+porque ele paga toda a largura 
+disponivel "csstricks"
+Display é um tipo de visualização 
+Em alguns elementos por padrão é
+display block em outro inline 
+Tem elementos que são em linha
+então deve usar display block
+ 
+*/
+#profile img{
+ width:112px;
+}
+/* agora vamos por os tamanhos
+das fontes do texto 
+a fonte to texto por padrão ja é 16px
+*/
+#profile p{
+  font-weight:500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/*switch*/
+#switch {
+ 
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  /*Trabalhando na posicionamento do elemento*/
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+
+  transform: translateY(-50%);
+  
+  
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+
+     display: block;
+      width: 64px;
+      height: 24px;
+
+      background: var(--surface-color);
+
+      border: 1px solid var(--stroke-color);
+      backdrop-filter: blur(4px) ;
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 9999px;
+}
+/*Links*/
+ ul{
+  list-style: none;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+ul li a{
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+
+  padding: 16px 24px ;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+ 
+ 
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration:none;
+  font-weight: bold;
+
+  transition: background 0.2s;
+  
+} 
+/*Pseudo-seletor */
+ul li a:hover{
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*social links*/
+#social-links{
+  display:flex;
+  justify-content: center;
+ 
+
+  padding: 24px 0;
+  font-size: 24px;
+}
+/* abaixo fizemos o alinhamento das caixas das imagens */
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+/*Abaixo exeplo do hover muito bom de ser  usado */
+#social-links a:hover{
+  background: var(--highlight-color);
+  padding: 16px;
+  
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+

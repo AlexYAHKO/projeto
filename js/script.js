@@ -7,12 +7,12 @@ function toggleMode(){
   
   if (html.classList.contains("light")) {
     // se tiver light mode, adicionar a imagem light 
-    img.setAttribute("src", "./assets/the-cult-dreamtime.jpg.jpg")
+    img.setAttribute("src", "./assets/luz.jpeg")
   } 
   
   else {
     // se tiver sem light mode, manter a imagem normal
-    img.setAttribute("src", "./assets/jpg.png")
+    img.setAttribute("src", "./assets/noite.jpg")
     
   }
 
